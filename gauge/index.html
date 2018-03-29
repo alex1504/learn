@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>gauge</title>
+    <style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="302" height="380"></canvas>
+    <script src="gauge.js"></script>
+    <script>
+    new Gauge(document.getElementById('canvas'), {
+        radius: 150,
+        dotSpeed: 0.03,
+        progress: {
+            color: 'rgba(60,197,31, .5)',
+            bgColor: 'rgba(60,197,31, .3)',
+            dotColor: 'rgba(60,197,31, 1)'
+        },
+        division: {
+            lineColor: 'rgba(60,197,31, .2)',
+            smallerLineColor: 'rgba(60,197,31, .3)',
+            smallestLineColor: 'rgba(60,197,31, .1)',
+            scoreColor: 'rgba(60,197,31, .4)',
+            scoreFontsize: 10,
+            socreBoundColor: 'rgba(60,197,31, .4)',
+            scoreBoundFontsize: 10
+        },
+        title: {
+            show: true,
+            text: '和金分',
+            fontsize: 14,
+            color: '#3CC51F'
+        },
+        score: {
+            min: 0,
+            show: true,
+            value: 600,
+            fontsize: 80,
+            color: '#3CC51F'
+        },
+        commentText: {
+            show: true,
+            top: 50,
+            color: '#3CC51F',
+            fontsize: 28
+        },
+        time: {
+            show: true,
+            top: 80,
+            fontsize: 14,
+            color: '#3Cb41F'
+        },
+        stage: {
+            tags: ['信用较差', '信用中等', '信用良好', '信用优秀', '信用极好'],
+            bound: [500, 600, 700, 800, 1000],
+            boundColors: ['rgb(247,30,39)', 'rgb(247,30,39)', 'rgb(247,30,39)', 'rgb(7,202,130)', 'rgb(67,183,232)']
+        }
+    })
+    </script>
+</body>
+
+</html>

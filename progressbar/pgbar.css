@@ -1,0 +1,101 @@
+/* m-pgbar */
+.m-pgbar {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.m-pgbar .progress-wrap {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 4px;
+    background-color: #999;
+}
+
+.m-pgbar .progress-real {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    background-color: #1aad19;
+}
+
+.m-pgbar .progress-step-wrap {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    height: 100%;
+    top: 50%;
+    width: 108%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.m-pgbar .progress-step {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.m-pgbar .progress-step .step-box {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.m-pgbar .progress-step .step-box.z-active .step {
+    background-color: #1aad19
+}
+
+.m-pgbar .progress-step .step-box.z-active .step-desc {
+    color: #1aad19
+}
+
+.m-pgbar .progress-step .step {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #999;
+    color: #fefefe;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.m-pgbar .progress-step .step-desc {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 110%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+}

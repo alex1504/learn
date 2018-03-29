@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery.pgbar.js</title>
+    <link rel="stylesheet" href="pgbar.css">
+</head>
+
+<body>
+    <div class="m-pgbar" data-active=2 style="margin: 60px auto 60px;">
+        <div class="progress-bar">
+            <div class="progress-wrap">
+                <div class="progress-real"></div>
+                <div class="progress-step-wrap">
+                    <div class="progress-step">
+                        <div class="step-box">
+                            <div class="step">1</div>
+                            <div class="step-desc">产品选择</div>
+                        </div>
+                        <div class="step-box">
+                            <div class="step">2</div>
+                            <div class="step-desc">信息采集</div>
+                        </div>
+                        <div class="step-box">
+                            <div class="step">3</div>
+                            <div class="step-desc">储蓄卡绑定</div>
+                        </div>
+                        <div class="step-box">
+                            <div class="step">4</div>
+                            <div class="step-desc">合同确认</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./jquery.pgbar.js"></script>
+    <script>
+    $(".m-pgbar").pgBar()
+    </script>
+</body>
+
+</html>
